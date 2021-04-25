@@ -1,10 +1,6 @@
 module generator::Loader
 
 import IO;
-import ParseTree;
-
-import Map; 
-import List;
 
 import lang::common::AbstractSyntax; 
 
@@ -37,6 +33,9 @@ public tuple[map[str, Spec], map[str, Refinement]] loadModules(Configuration con
 
 
 public void parseModule(loc file) {
+	if(!exists(file)) {
+	  throw "File  <file> not found. please, review the information in the configuration file";  
+	}
     print("Loading file: " + file.path); 
     
 	if(file.extension == "cryptsl") {

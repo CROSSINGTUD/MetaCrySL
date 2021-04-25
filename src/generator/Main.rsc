@@ -1,7 +1,6 @@
 module generator::Main
 
 import IO;
-import ParseTree; 
 
 import util::StringUtils; 
 
@@ -10,7 +9,6 @@ import lang::crysl::AbstractSyntax;
 import lang::refinement::AbstractSyntax;
 
 import lang::configuration::AbstractSyntax; 
-import lang::configuration::ConcreteSyntax; 
 import lang::configuration::Parser;
 
 import generator::Loader; 
@@ -18,9 +16,14 @@ import generator::PreProcessor;
 import generator::PrettyPrinter; 
 
 void main(loc configurationFile) {
-   Configuration c = parseConfiguration(configurationFile); 
-   export(c, executePreProcessor(loadModules(c)));
-   println("done"); 
+   try {
+     Configuration c = parseConfiguration(configurationFile); 
+     export(c, executePreProcessor(loadModules(c)));
+     println("done");
+   } 
+   catch e: { 
+     println(e);
+   }    
 }
 
 void compileMetaCrysl(loc file) {
