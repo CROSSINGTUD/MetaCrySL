@@ -23,10 +23,10 @@ We use a program generator infrastructure that takes as input a configuration fi
 You can also use Meta-CrySL from the command line using the following steps: 
 
    * Download the Rascal Commandline REPL.
-      * This is a [JAR](https://update.rascal-mpl.org/console/rascal-shell-stable.jar) file that allows one to use Rascal from the command line. 
+      * `$ wget https://update.rascal-mpl.org/console/rascal-shell-stable.jar`
 
    * Create an alias for the downloaded file
-      * `$ alias rascal-shell='java -Xmx1G -Xss32m -jar <PATH>/rascal-shell-stable.jar'`
+      * `$ alias rascal-shell='java -Xmx1G -Xss32m -jar rascal-shell-stable.jar'`
 
    * Clone this repository and move to the local copy of the MetaCrySL repository
       * `$ git clone https://github.com/CROSSINGTUD/MetaCrySL.git`
