@@ -48,7 +48,7 @@ Alternativelly, you can also use Meta-CrySL from the command line. Requirements:
    * Run the `main` function with the location of a `configuration` file.
       * eg.: `rascal> main(|cwd:///samples/jca/android/config/Android0108.config|);` 
 
-*Note* it must be necessary to update the `src` and `out` folders in the configuration files.
+**Note** it must be necessary to update the `src` and `out` folders in the configuration files.
 Otherwise, a `File not found ...` exception might be thrown. See the example bellow. 
 
 ```
