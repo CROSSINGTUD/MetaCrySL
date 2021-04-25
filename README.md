@@ -15,3 +15,15 @@ Meta-CrySL is mostly based on meta-programming. We use three different languages
    * Configuration: a language that puts together ECrySL and Refinement specifications 
 
 We use a program generator infrastructure that takes as input a configuration file and outputs regular CrySL specifications. In this way, we do not have to modify the current crypto analysis of CogniCrypt.
+
+# Requirements
+
+We have successfully tested this implementation using the following settings.
+
+   * Java Development Kit - Version 8
+   * [Eclipse RCP 2019-06](https://www.eclipse.org/downloads/packages/release/2019-06/r/eclipse-ide-rcp-and-rap-developers)
+   * Rascal-MPL 0.18.3 (you can use the version from the RascalMPL Eclipse update site [https://update.rascal-mpl.org/stable/]
+
+The following video shows how to use this implementation.
+
+   * [MetaCrySL usage scenario](https://youtu.be/PmYWK926RrM)
