@@ -6,7 +6,7 @@ Meta-CrySL is a meta-specification language for CrySL. The main goal is to suppo
    * API implementation version (e.g., Bouncy Castle 1.60 x Bouncy Castle 1.50)
    * Cryptographic standards (e.g., FIPS and EuroCrypt)
    
-# Approach
+## Approach
 
 Meta-CrySL is mostly based on meta-programming. We use three different languages: 
 
@@ -16,9 +16,9 @@ Meta-CrySL is mostly based on meta-programming. We use three different languages
 
 We use a program generator infrastructure that takes as input a configuration file and outputs regular CrySL specifications. In this way, we do not have to modify the current crypto analysis of CogniCrypt.
 
-# Experimenting with MetaCrySL
+## Experimenting with MetaCrySL
 
-## Running MetaCrySL from Command Line
+### Running MetaCrySL from Command Line
 
 You can also use Meta-CrySL from the command line using the following steps: 
 
@@ -53,7 +53,7 @@ config Android0108 {
 }
 ```
 
-## Running MetaCrySL from Eclipse-RCP
+### Running MetaCrySL from Eclipse-RCP
 
 We have successfully tested this implementation using the following settings.
 
