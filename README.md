@@ -26,7 +26,7 @@ You can also use Meta-CrySL from the command line using the following steps:
       * `$ wget https://update.rascal-mpl.org/console/rascal-shell-stable.jar`
 
    * Create an alias for the downloaded file
-      * `$ alias rascal-shell='java -Xmx1G -Xss32m -jar rascal-shell-stable.jar'`
+      * `alias rascal-shell="java -Xmx1G -Xss32m -jar `pwd`/rascal-shell-stable.jar"`
 
    * Clone this repository and move to the local copy of the MetaCrySL repository
       * `$ git clone https://github.com/CROSSINGTUD/MetaCrySL.git`
@@ -41,8 +41,19 @@ You can also use Meta-CrySL from the command line using the following steps:
    * Run the `main` function with the location of a `configuration` file.
       * eg.: `rascal> main(|cwd:///samples/jca/android/config/Android0108.config|);` 
 
-**Note** it must be necessary to update the `src` and `out` folders in the configuration files.
-Otherwise, a `File not found ...` exception might be thrown. See the example bellow. 
+
+**Note:** You must review the `src` and `out` paths 
+of the configuration files. These configuration files are 
+within the following folders: 
+
+   * samples/jca/android/config/
+   * samples/jca/android-cc/config/
+   * samples/jca/android-bsi/config/
+
+The `src` folder must point to the full-qualified path of the `samples/jca` 
+directory (within the MetaCrySL local repository). You can decide where MetaCrySL 
+should generate the resulting CrySL rules (the `out` directory).
+See the example bellow. 
 
 ```
 config Android0108 {
@@ -51,6 +62,20 @@ config Android0108 {
 
   ...
 }
+```
+
+
+## Running MetaCrySL from a Docker Image       
+
+We also made available a docker image. To use it, proceed as follow:
+
+```{shell}
+$ docker pull rbonifacio/mcsl-java8
+$ docker run -it rbonifacio/mcsl-java8:v1 bash
+root@...:/mcsl> cd MetaCrySL
+root@...:/mcsl/MetaCrySL> rascal-shell
+rascal> import generator::Main;
+rascal> main(|cwd:///samples/jca/android/config/Android0108.config|);
 ```
 
 ### Running MetaCrySL from Eclipse-RCP
