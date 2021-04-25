@@ -26,7 +26,7 @@ You can also use Meta-CrySL from the command line using the following steps:
       * `$ wget https://update.rascal-mpl.org/console/rascal-shell-stable.jar`
 
    * Create an alias for the downloaded file
-      * alias rascal-shell="java -Xmx1G -Xss32m -jar ``pwd``/rascal-shell-stable.jar"
+      * `alias rascal-shell="java -Xmx1G -Xss32m -jar $(pwd)/rascal-shell-stable.jar"`
 
    * Clone this repository and move to the local copy of the MetaCrySL repository
       * `$ git clone https://github.com/CROSSINGTUD/MetaCrySL.git`
