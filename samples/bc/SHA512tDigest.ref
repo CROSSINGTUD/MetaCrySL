@@ -1,3 +1,0 @@
-SPEC SHA512tDigest REFINES AbstractMesssageDigest<org.bouncycastle.crypto.digests.SHA512tDigest> {
-	rename spec SHA512tDigest;
-}

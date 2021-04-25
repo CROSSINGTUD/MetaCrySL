@@ -1,3 +1,0 @@
-SPEC AeadFactory REFINES AbstractTinkFactory <com.google.crypto.tink.Aead> {
-	rename spec AeadFactory;
-}
