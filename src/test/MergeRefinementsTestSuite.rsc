@@ -1,16 +1,9 @@
 module \test::MergeRefinementsTestSuite
 
 import generator::Loader;
-import lang::common::ConcreteSyntax; 
-import lang::common::AbstractSyntax; 
-
-import lang::crysl::ConcreteSyntax; 
-import lang::crysl::AbstractSyntax; 
 import lang::crysl::Parser; 
 
 import lang::refinement::ConcreteSyntax; 
-import lang::refinement::AbstractSyntax; 
-import lang::refinement::Parser; 
 
 
 import ParseTree;

@@ -1,10 +1,8 @@
 module \test::ParserTestSuite
 
-import IO; 
 import ParseTree; 
 
 import lang::common::ConcreteSyntax;
-import lang::common::AbstractSyntax; 
 
 import lang::crysl::AbstractSyntax; 
 import lang::crysl::ConcreteSyntax; 

@@ -16,14 +16,19 @@ import generator::PreProcessor;
 import generator::PrettyPrinter; 
 
 void main(loc configurationFile) {
-   try {
+  execute(configurationFile);     
+}
+
+
+void execute(loc configurationFile) {
+  try {
      Configuration c = parseConfiguration(configurationFile); 
      export(c, executePreProcessor(loadModules(c)));
      println("done");
    } 
    catch e: { 
      println(e);
-   }    
+   } 
 }
 
 void compileMetaCrysl(loc file) {
