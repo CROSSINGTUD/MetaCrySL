@@ -70,7 +70,6 @@ config Android0108 {
 We also made available a docker image. To use it, proceed as follow:
 
 ```{shell}
-$ docker pull rbonifacio/mcsl-java8
 $ docker run -it rbonifacio/mcsl-java8:v1 bash
 root@...:/mcsl> cd MetaCrySL
 root@...:/mcsl/MetaCrySL> rascal-shell
